@@ -44,7 +44,7 @@ function ChampionCard(props) {
                 <div className="basic_stuff">
                     <div className="image_and_flip">
                         <div className="champion_image">
-                            <img src={"http://ddragon.leagueoflegends.com/cdn/11.9.1/img/champion/" + props.data.image.full} alt= {"" + props.name + " avatar image"}/>
+                            <img src={"https://ddragon.leagueoflegends.com/cdn/11.9.1/img/champion/" + props.data.image.full} alt= {"" + props.name + " avatar image"}/>
                         </div>
                         <button onClick={onChangeCardSide} ><i className='fa fa-rotate-right'></i>Flip</button>
                     </div>
@@ -82,7 +82,7 @@ function ChampionCard(props) {
                 <div className="basic_stuff">
                 <div className="image_and_flip">
                     <div className="champion_image">
-                        <img src={"http://ddragon.leagueoflegends.com/cdn/11.9.1/img/champion/" + props.data.image.full} alt= {"" + props.name + " avatar image"}/>
+                        <img src={"https://ddragon.leagueoflegends.com/cdn/11.9.1/img/champion/" + props.data.image.full} alt= {"" + props.name + " avatar image"}/>
                     </div>
                     <button onClick={onChangeCardSide} ><i className='fa fa-rotate-left'></i>Flip</button>
                 </div>

@@ -5,7 +5,7 @@ function ChampionLore(props) {
    
 
     const fetchData = async () => {
-		await fetch('http://ddragon.leagueoflegends.com/cdn/11.9.1/data/en_US/champion/' + props.id + '.json')
+		await fetch('https://ddragon.leagueoflegends.com/cdn/11.9.1/data/en_US/champion/' + props.id + '.json')
 			.then((res) => res.json())
 			.then((data) => {
                 setChampData(data.data[props.id])

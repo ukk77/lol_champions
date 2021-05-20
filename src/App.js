@@ -4,7 +4,7 @@ import ChampionCard from './Components/ChampionCard'
 
 function App() {
 	let championUrl =
-		'http://ddragon.leagueoflegends.com/cdn/11.9.1/data/en_US/champion.json';
+		'https://ddragon.leagueoflegends.com/cdn/11.9.1/data/en_US/champion.json';
 	const [championData, setChampionData] = useState([]);
 	const [showData, setShowData] = useState(false);
 

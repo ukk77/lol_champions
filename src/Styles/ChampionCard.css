@@ -1,0 +1,327 @@
+@import url("https://kit.fontawesome.com/a076d05399.js");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("http://fonts.cdnfonts.com/css/friz-quadrata-std");
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: 'Friz Quadrata Std', sans-serif;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.app::before {
+  content: ' ';
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-image: url("../lol_logo4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: center;
+}
+
+.data_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow-y: scroll;
+  scrollbar-width: None;
+}
+
+.champs {
+  width: 50%;
+  height: 100vh;
+}
+
+.card {
+  margin: 5%;
+  padding: 1%;
+  min-height: 45vh;
+  margin-top: 8%;
+  background-color: #e9e6e6;
+  border-radius: 5%;
+  background-image: url("../Components/background.jpg");
+  background-repeat: no-repeat;
+  background-opacity: 0.2;
+  -webkit-box-shadow: 2px 5px 3px 1px #888888;
+          box-shadow: 2px 5px 3px 1px #888888;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  opacity: 0.8;
+}
+
+.card img {
+  border-radius: 50%;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 5px 10px 8px 2px #888888;
+          box-shadow: 5px 10px 8px 2px #888888;
+  opacity: 1;
+}
+
+.card .champion_stats {
+  margin: 1%;
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2%;
+  margin-left: 6%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card .champion_stats .champ_stats p {
+  margin-bottom: 1%;
+}
+
+.basic_stuff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2%;
+  padding: 2%;
+}
+
+.basic_stuff .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.basic_stuff li {
+  margin: 0%;
+  padding: 1%;
+  list-style-type: None;
+}
+
+.basic_stuff .champion_image {
+  margin: 1%;
+  padding: 1%;
+  margin-top: 30%;
+  margin-bottom: 20%;
+}
+
+.basic_stuff .image_and_flip button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2% 15% 2% 12%;
+  font-size: 1.25em;
+  border-radius: 12%;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.basic_stuff .image_and_flip button i {
+  padding-right: 10%;
+  font-size: 24px;
+}
+
+.basic_stuff .image_and_flip button i {
+  padding-left: 0.25%;
+}
+
+.basic_stuff .image_and_flip button:hover {
+  background-color: #ced0d1;
+  -webkit-box-shadow: 5px 10px 8px 2px #888888;
+          box-shadow: 5px 10px 8px 2px #888888;
+}
+
+.basic_stuff .champion_details {
+  margin: 1%;
+  padding: 1%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  margin-left: 6%;
+}
+
+.basic_stuff .champion_details button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2% 15% 2% 12%;
+  font-size: 1.25em;
+  border-radius: 12%;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.basic_stuff .champion_details button i {
+  padding-right: 10%;
+  font-size: 24px;
+}
+
+.basic_stuff .champion_details button i {
+  padding-left: 0.25%;
+}
+
+.basic_stuff .champion_details button:hover {
+  background-color: #ced0d1;
+  -webkit-box-shadow: 5px 10px 8px 2px #888888;
+          box-shadow: 5px 10px 8px 2px #888888;
+}
+
+.basic_stuff .champion_details .detail_text {
+  font-size: large;
+  font-weight: bold;
+}
+
+.basic_stuff .champ_info {
+  margin: 3%;
+  padding: 2%;
+  margin-right: 0%;
+  width: 30%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.basic_stuff .champ_info .progressBars {
+  margin-right: 0%;
+  margin-left: auto;
+}
+
+.basic_stuff .champ_info .progressContainer {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.basic_stuff .champ_info .bar {
+  margin: 3%;
+  padding: 1%;
+  margin-right: auto;
+  margin-left: 0%;
+  height: 12px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+
+.basic_stuff .champ_info .bar_1 {
+  background-color: #e29999;
+  width: 10%;
+}
+
+.basic_stuff .champ_info .bar_2 {
+  background-color: #a5a5c7;
+  width: 20%;
+}
+
+.basic_stuff .champ_info .bar_3 {
+  background-color: #99ce99;
+  width: 30%;
+}
+
+.basic_stuff .champ_info .bar_4 {
+  background-color: #acac7a;
+  width: 40%;
+}
+
+.basic_stuff .champ_info .bar_5 {
+  background-color: #b488b4;
+  width: 50%;
+}
+
+.basic_stuff .champ_info .bar_6 {
+  background-color: #b8a074;
+  width: 60%;
+}
+
+.basic_stuff .champ_info .bar_7 {
+  background-color: #c499a0;
+  width: 70%;
+}
+
+.basic_stuff .champ_info .bar_8 {
+  background-color: #74b3ad;
+  width: 80%;
+}
+
+.basic_stuff .champ_info .bar_9 {
+  background-color: #97a577;
+  width: 90%;
+}
+
+.basic_stuff .champ_info .bar_10 {
+  background-color: #c094c0;
+  width: 100%;
+}
+
+.lore {
+  margin: 1%;
+  padding: 1%;
+}
+
+.lore .lore_text {
+  margin: 2%;
+  padding: 2%;
+  -webkit-animation: fade 2s;
+  animation: fade 2s;
+  -webkit-box-shadow: 5px 10px 8px #888888;
+          box-shadow: 5px 10px 8px #888888;
+  border: 1px solid black;
+  border-radius: 5%;
+  background-color: white;
+}
+
+.hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/*# sourceMappingURL=ChampionCard.css.map */

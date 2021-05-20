@@ -1,0 +1,301 @@
+@import url('https://kit.fontawesome.com/a076d05399.js');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('http://fonts.cdnfonts.com/css/friz-quadrata-std');
+
+@mixin flex(){
+    display: flex;
+}
+
+@mixin spacing($padding, $margin){
+    margin: $margin;
+    padding: $padding;
+}
+
+$imgpath : '../Components/background.jpg';
+
+@mixin background($imgpath, $repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        repeat: $repeat;
+        opacity: 0.2;
+    }
+}
+
+$bgColor: rgb(233, 230, 230);
+$borderColor : black;
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @keyframes #{$animation-name} {
+      @content;
+    }
+}
+
+
+@mixin animation($str) {
+-webkit-animation: #{$str};
+animation: #{$str};
+}
+  
+
+@include keyframes(fade) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body{
+    font-family: 'Friz Quadrata Std', sans-serif;
+}
+
+.app{
+    @include flex();
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    &::before{
+        content: ' ';
+        opacity: 0.3;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        background-image: url('../lol_logo4.jpg');
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        background-position: center;
+    }
+}
+
+
+
+.data_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    overflow-y: scroll;
+    scrollbar-width: None;
+}
+
+.champs{
+    width: 50%;
+    height: 100vh;
+}
+
+.card{
+    @include spacing(1%, 5%);
+    min-height: 45vh;
+    margin-top: 8%;
+    background-color: $bgColor;
+    border-radius: 5%;
+    @include background($imgpath);
+    box-shadow: 2px 5px 3px 1px #888888;
+    transition: all .2s ease-in-out;
+    opacity: 0.8;
+    
+    img{
+        border-radius: 50%;    
+    }
+
+    &:hover{
+        transform: scale(1.1);
+        box-shadow: 5px 10px 8px 2px #888888;
+        opacity: 1;
+    }
+
+    .champion_stats{
+        @include spacing(1%, 1%);
+        @include flex();
+        margin-top: 2%;
+        margin-left: 6%;
+        transition: transform 1s;
+        backface-visibility: hidden;
+        .champ_stats{
+            p {
+                margin-bottom: 1%;
+            }
+        }
+    }
+}
+
+.basic_stuff{
+    @include flex();
+    @include spacing(2%, 2%);
+
+    .tags{
+        @include flex();
+    }
+    li{
+        @include spacing(1%, 0%);
+        list-style-type: None;
+    }
+
+    .champion_image{
+        @include spacing(1%, 1%);
+        margin-top: 30%;
+        margin-bottom: 20%;
+    }
+
+    .image_and_flip{
+        button {
+            i{
+                padding-right: 10%;
+                font-size: 24px;
+            }
+            @include flex();
+            justify-content: space-between;
+            padding: 2% 15% 2% 12%;
+            font-size: 1.25em;
+            border-radius: 12%;
+            transition: 1s ease-in-out;
+            // box-shadow: 5px 10px 8px 2px #888888;
+            
+            i {
+                padding-left: 0.25%;
+            }
+            
+            &:hover{
+                background-color: rgb(206, 208, 209);
+                box-shadow: 5px 10px 8px 2px #888888;
+            }
+        }
+
+    }
+
+    .champion_details{
+        @include spacing(1%, 1%);
+        margin-top: 2%;
+        margin-bottom: 1%;
+        margin-left: 6%;
+        button {
+            i{
+                padding-right: 10%;
+                font-size: 24px;
+            }
+            @include flex();
+            justify-content: space-between;
+            padding: 2% 15% 2% 12%;
+            font-size: 1.25em;
+            border-radius: 12%;
+            transition: 1s ease-in-out;
+            // box-shadow: 5px 10px 8px 2px #888888;
+            
+            i {
+                padding-left: 0.25%;
+            }
+            
+            &:hover{
+                background-color: rgb(206, 208, 209);
+                box-shadow: 5px 10px 8px 2px #888888;
+            }
+        }
+
+        .detail_text{
+            font-size: large;
+            font-weight: bold;
+        }
+    }
+
+    .champ_info{
+        @include spacing(2%, 3%);
+        margin-right: 0%;
+        width: 30%;
+        transition: transform 1s;
+        backface-visibility: hidden;
+        .progressBars{
+            margin-right: 0%;
+            margin-left: auto;
+        }
+
+        .progressContainer{
+            background-color: gray;
+            border-radius: 10px;
+        }
+        
+        .bar{
+            @include spacing(1%, 3%);
+            margin-right: auto;
+            margin-left: 0%;    
+            height: 12px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .bar_1{
+            background-color: rgb(226, 153, 153);
+            width: 10%;
+        }
+
+        .bar_2{
+            background-color: rgb(165, 165, 199);
+            width: 20%;
+        }
+
+        .bar_3{
+            background-color: rgb(153, 206, 153);
+            width: 30%;
+        }
+
+        .bar_4{
+            background-color: rgb(172, 172, 122);
+            width: 40%;
+        }
+
+        .bar_5{
+            background-color: rgb(180, 136, 180);
+            width: 50%;
+        }
+
+        .bar_6{
+            background-color: rgb(184, 160, 116);
+            width: 60%;
+        }
+
+        .bar_7{
+            background-color: rgb(196, 153, 160);
+            width: 70%;
+        }
+
+        .bar_8{
+            background-color: rgb(116, 179, 173);
+            width: 80%;
+        }
+
+        .bar_9{
+            background-color: rgb(151, 165, 119);
+            width: 90%;
+        }
+
+        .bar_10{
+            background-color: rgb(192, 148, 192);
+            width: 100%;
+        }
+    }
+}
+
+.lore{
+    @include spacing(1%, 1%);
+    
+    .lore_text{
+        @include spacing(2%, 2%);
+        @include animation('fade 2s');
+        box-shadow: 5px 10px 8px #888888;
+        border: 1px solid $borderColor;
+        border-radius: 5%;
+        background-color: white;
+    }
+}
+
+.hover  {
+    transform: rotateY(180deg);
+}

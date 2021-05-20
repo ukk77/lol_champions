@@ -2,6 +2,7 @@
   "name": "riot-api-dev",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lolchampions1.herokuapp.com/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@popperjs/core": "^2.9.2",
